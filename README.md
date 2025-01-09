@@ -1,86 +1,40 @@
-# Malicious-e-commerce-detector
+# Realtime Malicious E-Commerce Website Detector
 
-Realtime Malicious E-Commerce Website Detector
-Overview
-The Realtime Malicious E-Commerce Website Detector is a Python-based browser extension designed to safeguard users from malicious or deceptive shopping websites. By leveraging machine learning models, Natural Language Processing (NLP), and Optical Character Recognition (OCR) techniques, the extension evaluates shopping websites in real time to detect and highlight misleading or potentially harmful elements.
+## Overview
 
-Features
-Browser Integration: Developed as an easy-to-use browser extension for seamless integration.
-Machine Learning Analysis: Utilized Scikit-learn models for predicting website trustworthiness.
-Optical Character Recognition (OCR): Extracted and analyzed textual elements directly from webpage images using OpenCV.
-NLP-Powered Insights: Scanned and scored website text for deceptive language patterns using NLTK.
-Real-time Alerts: Provided instant feedback to users about a website's trustworthiness.
-User-Friendly Interface: Highlighted suspicious elements for quick identification.
-How It Works
-Data Collection:
+The **Realtime Malicious E-Commerce Website Detector** is a browser extension designed to help users detect deceptive or malicious shopping websites. This extension utilizes machine learning (ML), Optical Character Recognition (OCR), and Natural Language Processing (NLP) techniques to analyze and evaluate the trustworthiness of online stores in real-time. By scanning both textual and image-based content, the extension provides instant feedback and highlights potentially misleading elements to ensure safer online shopping experiences.
 
-Fetched textual and image content from shopping websites.
-Processed image-based content using OCR (via OpenCV) to extract embedded text.
-Feature Extraction:
+### Key Features
+- **Browser Extension**: Seamless integration with popular browsers (e.g., Chrome, Firefox) to analyze websites in real-time.
+- **Machine Learning**: Classifies websites as "safe" or "malicious" based on textual content using a trained Random Forest classifier.
+- **Optical Character Recognition (OCR)**: Extracts text from images (e.g., banners, ads) using OpenCV and Tesseract to detect hidden deceptive content.
+- **Natural Language Processing (NLP)**: Analyzes textual content (reviews, product descriptions) to identify patterns of misleading language or fraud.
+- **Real-time Alerts**: Highlights suspicious elements on the website with a visual cue (e.g., red borders, yellow backgrounds).
+- **User-friendly Interface**: Provides easy-to-understand alerts and highlighted suspicious elements on e-commerce websites.
 
-Used NLP techniques to identify patterns associated with misleading claims or fraud (e.g., overly promotional language, fake reviews).
-Extracted visual and textual features to score suspicious behavior.
-Machine Learning Model:
+## Tools & Technologies
 
-Trained a classification model using Scikit-learn to label websites as "Safe" or "Malicious."
-Features included metadata, textual patterns, and image-based content analysis.
-Browser Extension:
+- **Programming Language**: Python (for backend machine learning and OCR processing)
+- **Libraries**:  
+  - **Scikit-learn**: For building and training the machine learning model.
+  - **NLTK**: For natural language processing and text analysis.
+  - **OpenCV**: For image processing and optical character recognition (OCR).
+  - **Flask**: For creating the backend server that handles real-time predictions.
+- **Frontend**: Browser Extension (JavaScript, HTML, CSS)
+- **OCR**: Tesseract (via OpenCV and pytesseract)
+- **Deployment**: Flask server (can be deployed on cloud platforms like Heroku, AWS, or run locally)
 
-Integrated the detection engine into a browser extension.
-Delivered real-time warnings and visual highlights of questionable website elements.
-Tools and Technologies
-Programming Language: Python
-Libraries:
-Machine Learning: Scikit-learn
-Natural Language Processing: NLTK
-OCR and Computer Vision: OpenCV
-Deployment: Packaged as a browser extension compatible with popular web browsers (e.g., Chrome, Firefox).
-Installation and Usage
-Prerequisites
-Python 3.x installed on your system.
-Browser supporting extensions (e.g., Chrome).
-Installation Steps
-Clone this repository:
-bash
-Copy code
-git clone https://github.com/your-username/malicious-website-detector.git  
-cd malicious-website-detector  
-Install required Python libraries:
-bash
-Copy code
-pip install -r requirements.txt  
-Set up the browser extension:
-Locate the extension folder.
-Enable developer mode in your browser.
-Load the extension folder into your browser.
-Usage
-Navigate to any e-commerce website.
-The extension will automatically scan the webpage and display a trust score.
-Suspicious elements will be highlighted for easy identification.
-Dataset and Training
-Dataset Sources:
-Public datasets of malicious and safe websites.
-Scraped data from e-commerce platforms (manually labeled).
-Training Process:
-Cleaned and preprocessed data using NLTK for text analysis.
-Extracted features using a mix of image processing (OpenCV) and metadata analysis.
-Trained a supervised learning model using Scikit-learn.
-Results and Performance
-Achieved 95% accuracy on the test set.
-Detected various patterns of deception, such as:
-Fake discounts.
-Fraudulent product claims.
-Misleading text embedded in images.
-Future Improvements
-Support for additional languages for NLP analysis.
-Advanced deep learning models for better detection accuracy.
-Enhanced UI/UX for a more intuitive extension experience.
-Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your updates.
+## Installation & Setup
 
-License
-This project is licensed under the MIT License.
+### Prerequisites
+1. **Python 3.x** installed on your machine.
+2. A browser that supports extensions (e.g., Chrome, Firefox).
+3. **Tesseract-OCR** installed on your system for OCR functionality (available [here](https://github.com/tesseract-ocr/tesseract)).
 
+### Step 1: Install Backend Dependencies
+Clone the repository and install the necessary Python dependencies:
 
-
-Feel free to customize this template further based on your specific details and implementation nuances!
+```bash
+git clone https://github.com/your-username/malicious-website-detector.git
+cd malicious-website-detector
+pip install -r requirements.txt
